@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminControl.Master.cs" Inherits="Internal_Project.AdminControl" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="min-h-screen bg-gradient-to-b from-[#001f3f] via-[#003366] to-[#004080] text-white">
+    <form id="Form1" runat="server">
+        <div class="flex min-h-screen">
+
+            <!-- Sidebar -->
+            <aside class="w-64 bg-black/30 backdrop-blur-md p-6 space-y-6">
+                <!-- Animated Heading -->
+                <h2 class="text-3xl font-extrabold tracking-wide text-center ">
+                    Admin Panel
+                </h2>
+
+              <nav class="flex flex-col gap-4 mt-8 pt-9" >
+    <a href="Dashboard.aspx" 
+       class="relative hover:text-yellow-400 transition duration-300 
+              before:content-[''] before:absolute before:-bottom-1 before:left-0 
+              before:w-0 before:h-[2px] before:bg-yellow-400 
+              before:transition-all before:duration-300 hover:before:w-full text-2xl">
+        Dashboard
+    </a>
+
+    <a href="AddMovie.aspx" 
+       class="relative hover:text-yellow-400 transition duration-300 
+              before:content-[''] before:absolute before:-bottom-1 before:left-0 
+              before:w-0 before:h-[2px] before:bg-yellow-400 
+              before:transition-all before:duration-300 hover:before:w-full text-2xl">
+        Add Movie
+    </a>
+
+    <a href="UpdateMovie.aspx" 
+       class="relative hover:text-yellow-400 transition duration-300 
+              before:content-[''] before:absolute before:-bottom-1 before:left-0 
+              before:w-0 before:h-[2px] before:bg-yellow-400  
+              before:transition-all before:duration-300 hover:before:w-full text-2xl">
+        Update Movie
+    </a>
+
+    <a href="DeleteMovie.aspx" 
+       class="relative hover:text-yellow-400 transition duration-300 
+              before:content-[''] before:absolute before:-bottom-1 before:left-0 
+              before:w-0 before:h-[2px] before:bg-yellow-400 
+              before:transition-all before:duration-300 hover:before:w-full text-2xl">
+        Delete Movie
+    </a>
+</nav>
+
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1 pl-12 pr-6 pt-9">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+          </main>
+        </div>
+    </form>
+</body>
+</html>
